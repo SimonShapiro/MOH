@@ -1,0 +1,128 @@
+ddl file= MOH.ddl
+// Master Operational Hierarchy DDL v1.0
+
+CREATE property V.id string
+
+CREATE property E.id string
+
+CREATE CLASS OrgUnit extends V
+
+CREATE CLASS OrgUnit_CONTAINS_OrgUnit extends E
+CREATE property OrgUnit_CONTAINS_OrgUnit.out link OrgUnit
+CREATE property OrgUnit_CONTAINS_OrgUnit.in link OrgUnit
+
+CREATE CLASS FrontToBackProcess extends V
+
+CREATE CLASS CBM extends V
+
+CREATE CLASS CBM_CONTAINS_CBM extends E
+CREATE property CBM_CONTAINS_CBM.out link CBM
+CREATE property CBM_CONTAINS_CBM.in link CBM
+
+CREATE CLASS RealisedCapability extends V
+CREATE property RealisedCapability.CBM link CBM
+
+CREATE CLASS F2B_USES_RealisedCapability extends E
+CREATE property F2B_USES_RealisedCapability.out link FrontToBackProcess
+CREATE property RealisedCapability.in link RealisedCapability
+[ 'CREATE property V.id string',
+  'CREATE property E.id string',
+  'CREATE CLASS OrgUnit extends V',
+  'CREATE CLASS OrgUnit_CONTAINS_OrgUnit extends E',
+  'CREATE property OrgUnit_CONTAINS_OrgUnit.out link OrgUnit',
+  'CREATE property OrgUnit_CONTAINS_OrgUnit.in link OrgUnit',
+  'CREATE CLASS FrontToBackProcess extends V',
+  'CREATE CLASS CBM extends V',
+  'CREATE CLASS CBM_CONTAINS_CBM extends E',
+  'CREATE property CBM_CONTAINS_CBM.out link CBM',
+  'CREATE property CBM_CONTAINS_CBM.in link CBM',
+  'CREATE CLASS RealisedCapability extends V',
+  'CREATE property RealisedCapability.CBM link CBM',
+  'CREATE CLASS F2B_USES_RealisedCapability extends E',
+  'CREATE property F2B_USES_RealisedCapability.out link FrontToBackProcess',
+  'CREATE property RealisedCapability.in link RealisedCapability' ]
+processing CREATE property V.id string
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20property%20V.id%20string","headers":{"Accept":"application/json"}}
+Back with 200
+Got 49
+{ result: [ { '@type': 'd', '@version': 0, value: 1 } ] }
+processing CREATE property E.id string
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20property%20E.id%20string","headers":{"Accept":"application/json"}}
+Back with 200
+Got 49
+{ result: [ { '@type': 'd', '@version': 0, value: 1 } ] }
+processing CREATE CLASS OrgUnit extends V
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20CLASS%20OrgUnit%20extends%20V","headers":{"Accept":"application/json"}}
+Back with 200
+Got 50
+{ result: [ { '@type': 'd', '@version': 0, value: 12 } ] }
+processing CREATE CLASS OrgUnit_CONTAINS_OrgUnit extends E
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20CLASS%20OrgUnit_CONTAINS_OrgUnit%20extends%20E","headers":{"Accept":"application/json"}}
+Back with 200
+Got 50
+{ result: [ { '@type': 'd', '@version': 0, value: 13 } ] }
+processing CREATE property OrgUnit_CONTAINS_OrgUnit.out link OrgUnit
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20property%20OrgUnit_CONTAINS_OrgUnit.out%20link%20OrgUnit","headers":{"Accept":"application/json"}}
+Back with 200
+Got 49
+{ result: [ { '@type': 'd', '@version': 0, value: 2 } ] }
+processing CREATE property OrgUnit_CONTAINS_OrgUnit.in link OrgUnit
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20property%20OrgUnit_CONTAINS_OrgUnit.in%20link%20OrgUnit","headers":{"Accept":"application/json"}}
+Back with 200
+Got 49
+{ result: [ { '@type': 'd', '@version': 0, value: 3 } ] }
+processing CREATE CLASS FrontToBackProcess extends V
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20CLASS%20FrontToBackProcess%20extends%20V","headers":{"Accept":"application/json"}}
+Back with 200
+Got 50
+{ result: [ { '@type': 'd', '@version': 0, value: 14 } ] }
+processing CREATE CLASS CBM extends V
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20CLASS%20CBM%20extends%20V","headers":{"Accept":"application/json"}}
+Back with 200
+Got 50
+{ result: [ { '@type': 'd', '@version': 0, value: 15 } ] }
+processing CREATE CLASS CBM_CONTAINS_CBM extends E
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20CLASS%20CBM_CONTAINS_CBM%20extends%20E","headers":{"Accept":"application/json"}}
+Back with 200
+Got 50
+{ result: [ { '@type': 'd', '@version': 0, value: 16 } ] }
+processing CREATE property CBM_CONTAINS_CBM.out link CBM
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20property%20CBM_CONTAINS_CBM.out%20link%20CBM","headers":{"Accept":"application/json"}}
+Back with 200
+Got 49
+{ result: [ { '@type': 'd', '@version': 0, value: 2 } ] }
+processing CREATE property CBM_CONTAINS_CBM.in link CBM
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20property%20CBM_CONTAINS_CBM.in%20link%20CBM","headers":{"Accept":"application/json"}}
+Back with 200
+Got 49
+{ result: [ { '@type': 'd', '@version': 0, value: 3 } ] }
+processing CREATE CLASS RealisedCapability extends V
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20CLASS%20RealisedCapability%20extends%20V","headers":{"Accept":"application/json"}}
+Back with 200
+Got 50
+{ result: [ { '@type': 'd', '@version': 0, value: 17 } ] }
+processing CREATE property RealisedCapability.CBM link CBM
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20property%20RealisedCapability.CBM%20link%20CBM","headers":{"Accept":"application/json"}}
+Back with 200
+Got 49
+{ result: [ { '@type': 'd', '@version': 0, value: 2 } ] }
+processing CREATE CLASS F2B_USES_RealisedCapability extends E
+------
+Day dreaming! {"method":"POST","port":2480,"host":"127.0.0.1","auth":"admin:admin","path":"/command/MOH%20v1.0/sql/CREATE%20CLASS%20F2B_USES_RealisedCapability%20extends%20E","headers":{"Accept":"application/json"}}
+Back with 200
+Got 50
+{ result: [ { '@type': 'd', '@version': 0, value: 18 } ] }
+stop
